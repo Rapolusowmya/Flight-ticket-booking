@@ -1,0 +1,85 @@
+<html>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+  .ownername{
+  border-style: solid;
+border-width: 1px;
+border-color: #000;
+border-radius: 10px;
+  }
+  .cardnumber{
+  border-style: solid;
+border-width: 1px;
+border-color: #000;
+border-radius: 10px;
+  }
+  .cvv{
+  border-style: solid;
+border-width: 1px;
+border-color: #000;
+border-radius: 10px;}
+.month{
+border-style: solid;
+border-width: 1px;
+border-color: #000;
+border-radius: 10px;}
+.year{
+border-style: solid;
+border-width: 1px;
+border-color: #000;
+border-radius: 10px;}
+.button{
+border-radius: 10px;
+}
+.amount{
+border-style: solid;
+border-width: 1px;
+border-color: #000;
+border-radius: 10px;
+}
+  </style>
+</head>
+<body>
+<form action="" method ="POST">
+<center><h4>Payment</h4>
+<br>
+<br>
+<br>
+    <div className = "container">
+	<center>Enter the card holder name:<br>
+	
+	<center> <input type = "text" class = "ownername" placeholder = " Enter the cardholder"/>
+	<br>
+	<br>
+	Enter the card number :<br>
+	
+	
+	<center><input type = "text" class = "cardnumber" placeholder = " Enter the card number"/>
+	<br> 
+	<br>
+	Enter the cvv number :<br>
+	<input type = "text" class = "cvv" placeholder =" cvv number "/>
+	<br>
+	<br>
+	Expiry Date:
+	<input type = "text" class = "month" placeholder="month" />/
+	<input type = "text" class = "year" placeholder = "year"/>
+	<br>
+	<br>
+	Enter the amount  :
+	<input type = "text" class = "amount" placeholder = "  Enter the amount"/>
+	<br>
+	<br>
+	<br>
+	<input type = "button" class = "button" value = "confirm payment..!" />
+	</div>
+</form>
+</body>
+</html>
