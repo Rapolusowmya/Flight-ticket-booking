@@ -44,41 +44,95 @@ border-width: 1px;
 border-color: #000;
 border-radius: 10px;
 }
+.container
+{
+background-color: LightGray;
+}
   </style>
 </head>
 <body>
+<script>
+function fun()
+{
+	let cardnum = document.getElementById("cardnumber").value;
+	let len = cardnum.length;
+	if(len<16)
+	{
+	alert('cardnumber is invalid');
+	}
+	else
+	{
+	for(let i=0;i<len;i++)
+	{
+	    if(! Number.isDigit(cardnum[i]))
+		{
+			alert('enter the proper card number');
+		}
+	}
+	}
+	let cvv = document.getElementById("cvv").value;
+	for(let j=0 ; j< cvv.length;j++)
+	{
+	 if(!Number.isDigit(cvv[j]))
+	 {
+	 alert('enter the valid cvv number');
+	 }
+	}
+	let m = document.getElementById("month").value;
+	let y = document.getElementById("year").value;
+	for(let i=0;i<2; i++)
+	{
+	    if(!Number.isDigit(m[i]))
+		{
+		  alert('enter a valid month');
+		}
+	}
+}
+/*function fun1()
+{
+     let cvv = document.getElementById("cvv").value;
+	 for(let i=0;i<cvv.length;i++)
+	 {
+		if(!Number.isDigit(cvv[i])
+		{
+		    alert('enter a valid cvv number');
+		}
+	 }
+}*/
+</script>
+ <div class = "container">
 <form action="" method ="POST">
 <center><h4>Payment</h4>
 <br>
 <br>
 <br>
-    <div className = "container">
+   
 	<center>Enter the card holder name:<br>
 	
-	<center> <input type = "text" class = "ownername" placeholder = " Enter the cardholder"/>
+	<center> <input type = "text" class = "ownername" id = "ownername" placeholder = " Enter the cardholder" maxlength = "25"/>
 	<br>
 	<br>
 	Enter the card number :<br>
 	
 	
-	<center><input type = "text" class = "cardnumber" placeholder = " Enter the card number"/>
+	<center><input type = "text" class = "cardnumber" id = "cardnumber" placeholder = " Enter the card number" maxlength = "16"/>
 	<br> 
 	<br>
 	Enter the cvv number :<br>
-	<input type = "text" class = "cvv" placeholder =" cvv number "/>
+	<input type = "text" class = "cvv" id="cvv" placeholder =" cvv number " maxlength = "4"/>
 	<br>
 	<br>
 	Expiry Date:
-	<input type = "text" class = "month" placeholder="month" />/
-	<input type = "text" class = "year" placeholder = "year"/>
+	<input type = "text" class = "month" id = "month" placeholder="month" maxlength="2" />/
+	<input type = "text" class = "year" id="year" placeholder = "year" maxlength = "4"/>
 	<br>
 	<br>
 	Enter the amount  :
-	<input type = "text" class = "amount" placeholder = "  Enter the amount"/>
+	<input type = "text" class = "amount" id = "amount" placeholder = "  Enter the amount" maxlength = "6"/>
 	<br>
 	<br>
 	<br>
-	<input type = "button" class = "button" value = "confirm payment..!" />
+	<input type = "button" class = "button"  value = "pay now" onclick="fun()" />
 	</div>
 </form>
 </body>
